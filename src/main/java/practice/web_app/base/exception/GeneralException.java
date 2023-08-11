@@ -10,4 +10,9 @@ public class GeneralException extends RuntimeException{
         super(Code.INTERNAL_ERROR.getMessage(message));
         this.errorCode = Code.INTERNAL_ERROR;
     }
+
+    public GeneralException(Code errorCode) {
+        super(errorCode.getMessage());
+        this.errorCode = errorCode;
+    }
 }
